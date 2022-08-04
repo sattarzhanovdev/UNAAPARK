@@ -55,7 +55,6 @@ function App() {
         </Routes>
       </main>
 
-      <Support />
       <Anchor />
     </div>
 

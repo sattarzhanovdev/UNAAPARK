@@ -31,14 +31,14 @@ const Static = () => {
         </div>
         <div className={cls.stat_block}>
           {
-            filter && filter.map(base => <ProgressCircle percentage={base.power} article="л.с" />)
+            filter && filter.map(base => <ProgressCircle percentage={base.horseStrong} article="л.с" />)
           }
-          <p>Мощность двигаетеля</p>
+          <p>Мощность двигателя</p>
         </div>
         <div className={cls.stat_block}>
           {
             // <ProgressCircle percentage={43} article="л" />
-            filter && filter.map(base => <ProgressCircle percentage={base.benz} article="л" />)
+            filter && filter.map(base => <ProgressCircle percentage={base.fuel} article="л" />)
 
           }
           <p>Объем топливного бака</p>
