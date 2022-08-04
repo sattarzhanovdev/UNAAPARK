@@ -1,0 +1,131 @@
+.filterToCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .filter {
+    width: 90%;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: 320px) {
+      flex-direction: column;
+    }
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      align-items: baseline;
+    }
+
+    .filtration {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+
+      @media (min-width: 768px) {
+        align-items: center;
+        flex-direction: row;
+      }
+    }
+
+    .container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0rem 2rem;
+
+      @media (min-width:320px) {
+        width: 270px;
+        overflow-x: scroll;
+      }
+
+      @media (min-width: 768px) {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .btn {
+        width: 50px;
+        height: 50px;
+        background: #3B4FF9;
+        border: 1px solid #3B4FF9;
+        border-radius: 5px;
+        color: white;
+        font-size: 20px;
+
+        &:hover {
+          background: none;
+          color: #3B4FF9;
+        }
+
+        @media (min-width:768px) {
+          display: block;
+          cursor: pointer;
+          text-decoration: none;
+          transition: 0.3s ease-in-out;
+          margin-top: 20px;
+        }
+      }
+
+      select {
+        @media (min-width:320px) {
+          width: 100%;
+          height: 40px;
+          border: 1px solid black;
+          outline: none;
+          margin-top: 20px;
+
+        }
+
+        @media (min-width:768px) {
+          display: none;
+        }
+      }
+    }
+
+    .selectBox {
+      width: 200px;
+
+      select {
+        width: 100%;
+        height: 50px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        outline: none;
+        padding-left: 8px;
+      }
+    }
+
+    .filterForm {
+      @media (min-width:320px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 0;
+      }
+
+      .searchInput {
+        @media (min-width:320px) {
+          width: 90%;
+          height: 50px;
+          padding-left: 15px;
+          outline: none;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+        }
+
+        @media (min-width:768px) {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

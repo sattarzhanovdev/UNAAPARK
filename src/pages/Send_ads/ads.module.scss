@@ -1,0 +1,81 @@
+.sendAds{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  min-height: 100vh;
+  .ads{
+    width: 350px;
+    height: auto;
+    margin-top: 50px;
+    padding: 1rem 0;
+    border: 2px solid #3B4FF9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h1{
+      font-size: 25px;
+    }
+    div{
+      input{
+        width: 250px;
+        height: 35px;
+        padding-left: 15px;
+        margin-bottom: 15px;
+        border: 1px solid #3B4FF9;
+        display: flex;
+        outline: none;
+      }
+      .file{
+        padding: 7.5px 15px;
+      }
+      select{
+        width: 250px;
+        height: 35px;
+        margin-bottom: 15px;
+        padding-left: 15px;
+        cursor: pointer;
+        background: none;
+        border: 1px solid #3B4FF9;
+        color: black;
+        transition: .5s;
+      }
+    }
+    select{
+      width: 250px;
+      height: 35px;
+      margin-bottom: 15px;
+      padding-left: 15px;
+      cursor: pointer;
+      background: none;
+      border: 1px solid black;
+      color: black;
+      transition: .5s;
+      border: 1px solid #3B4FF9;
+      background: #3B4FF9;
+      color: white;
+      cursor: pointer;
+      transition: .5s;
+      &:hover{
+        background: none;
+        color: #3B4FF9;
+      }
+    }
+  }
+  button{
+    width: 250px;
+    height: 35px;
+    border: 1px solid blac;
+    background: none;
+    border: 1px solid black;
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+    &:hover{
+      background: none;
+      color: black;
+    }
+  }
+}

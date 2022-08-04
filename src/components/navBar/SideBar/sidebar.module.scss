@@ -1,0 +1,268 @@
+.sideBar{
+  @media (max-width: 768px) {
+    width: 50%;
+  }
+
+  @media (max-width: 425px) {
+    width: 100%;
+  }
+
+  height: 100vh;
+  display: flex;
+  transform: translateX(100%);
+  padding: 50px 25px 100px ;
+  justify-content: space-between;
+  flex-direction: column;
+  z-index: 100;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  transition: .5s;
+  .barsClose{
+    cursor: pointer;
+    list-style: none;
+    position: absolute;
+    left: 15px;
+    li{
+      font-size: 30px;
+      color: white;
+    }
+  }
+  .send_ads{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    margin-top: 50px;
+    width: 250px;
+    border: 1px solid white;
+    padding: 5px 5px;
+    li{
+      color: white;
+      list-style: none;
+    }
+    a{
+      padding: 0 5px;
+      text-decoration: none;
+      border: 0;
+      color: white;
+    }
+  }
+  .list{
+    height: 50vh;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    li{
+      a{
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+  .sign{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    li{
+      a{
+        margin: 0 10px;
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+
+  .signNotActive{
+    display: none;
+  }
+
+  .signActive{
+    li{
+      list-style: none;
+      display: flex;
+      a{
+        text-decoration: none;
+        color: black;
+      }
+    }
+    span{
+      color: black;
+      margin: 0 15px;
+    }
+  }
+  .user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    transition: .5s;
+    img{
+      width: 35px;
+      height: 35px;
+      border-radius: 100px;
+      transition: .5s;
+      &:hover{
+        outline: 3px solid #3646D4;
+      }
+    }
+    p{
+      position: relative;
+     &::before{
+       content: '';
+       width: 100%;
+       height: 2px;
+       background: black;
+       position: absolute;
+       bottom: -5px;
+       left: 0;
+     }
+    }
+    p{
+      margin: 10px 0;
+    }
+  }
+
+}
+
+
+.sideBarActive{
+  @media (max-width: 768px) {
+    width: 50%;
+  }
+  
+  @media (max-width: 425px) {
+    width: 100%;
+  }
+
+
+  height: 100vh;
+  z-index: 100;
+  display: flex;
+  transform: translateX(0);
+  padding: 50px 25px 100px ;
+  z-index: 100;
+  justify-content: space-between;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  color: white;
+  transition: .5s;
+  background: rgba($color: #000000, $alpha: 0.9);
+  .barsClose{
+    cursor: pointer;
+    list-style: none;
+    position: absolute;
+    left: 15px;
+
+    li{
+      font-size: 30px;
+      color: white;
+    }
+  }
+  .send_ads{
+    width: 250px;
+    height: 45px;
+    border: 1px solid white;
+    padding: 5px 5px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li{
+      color: white;
+      list-style: none;
+    }
+    a{
+      padding: 0 5px;
+      text-decoration: none;
+      border: 0;
+      color: white;
+    }
+  }
+  .list{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    margin-top: 100px;
+    li{
+      a{
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+  .sign{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    li{
+      a{
+        margin: 0 10px;
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+
+  .signNotActive{
+    display: none;
+  }
+
+  .signActive{
+    li{
+      list-style: none;
+      display: flex;
+      a{
+        text-decoration: none;
+        color: black;
+      }
+    }
+    span{
+      color: black;
+      margin: 0 15px;
+    }
+  }
+  .user{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    transition: .5s;
+    img{
+      width: 35px;
+      height: 35px;
+      border-radius: 100px;
+      transition: .5s;
+      &:hover{
+        outline: 3px solid #3646D4;
+      }
+    }
+    p{
+      position: relative;
+     &::before{
+       content: '';
+       width: 100%;
+       height: 2px;
+       background: black;
+       position: absolute;
+       bottom: -5px;
+       left: 0;
+     }
+    }
+    p{
+      margin: 10px 0;
+    }
+  }
+} 

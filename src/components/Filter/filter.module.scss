@@ -1,0 +1,261 @@
+.filter_banner{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0; 
+  transform: translateY(0);
+  background: rgba($color: #000000, $alpha: 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 100;
+  transition: .5s;
+  .filter{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background: rgba($color: #000000, $alpha: 0.8);
+    form{
+      z-index: 100;
+      .close{
+        position: absolute;
+        right: 25px;
+        top: 15px;
+        color: white;
+        cursor: pointer;
+      }
+      li{
+        color: white;
+        list-style: none;
+      }
+      p{
+        text-align: left;
+      }
+      .filter_form{
+        margin: 0;
+        padding: 0;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        list-style: none;
+        button{
+          width: 250px;
+          height: 35px;
+          margin-top: 15px;
+          background: none;
+          border: 1px solid white;
+          color: white;
+          z-index: 100;
+          cursor: pointer;
+          transition: .5s;
+          &:hover{
+            background: white;
+            color: black;
+          }
+        }
+        p{
+          color: white;
+        }
+        .address_form{
+          position: relative;
+          input{
+            width: 250px;
+            height: 35px;
+            outline: none;
+            padding-left: 10px;
+            border: 0;
+            border-bottom: 2px solid black;
+            border-left: 2px solid black;
+          }
+          li{
+            position: absolute;
+            color: black;
+            right: 5px;
+            top: 5px;
+            font-size: 20px;
+          }
+        }
+        .form_time{
+          width: 300px;
+          display: flex;
+          justify-content: space-around;
+          .time_form{
+            position: relative;
+            input{
+              width: 100px;
+              height: 35px;
+              outline: none;
+              padding-left: 10px;
+              border: 0;
+              border-bottom: 2px solid black;
+              border-left: 2px solid black;
+            }
+            li{
+              position: absolute;
+              color: black;
+              right: 5px;
+              top: 7px;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+  
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .filter{
+      form{
+        .filter_form{
+          button{
+            width: 350px;
+          }
+          .address_form{
+            input{
+              width: 350px;
+            }
+          }
+          .form_time{
+            width: 400px;
+            .time_form{
+              input{
+                width: 150px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .filter_banner{
+    height: 100vh;
+  }
+}
+
+
+.notActive{
+  width: 100%;
+  height: 100vh;
+  transform: translateY(-100%);
+  background: rgba($color: #000000, $alpha: 0.5);
+  position: fixed;  
+  top: 0; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 100;
+  transition: .5s;
+  .filter{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background: rgba($color: #000000, $alpha: 0.5);
+    form{
+      z-index: 100;
+      .close{
+        position: absolute;
+        right: 25px;
+        top: 15px;
+        color: white;
+        cursor: pointer;
+      }
+      li{
+        color: white;
+        list-style: none;
+      }
+      p{
+        text-align: left;
+      }
+      .filter_form{
+        margin: 0;
+        padding: 0;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        list-style: none;
+        button{
+          width: 250px;
+          height: 35px;
+          margin-top: 15px;
+          background: none;
+          border: 1px solid white;
+          color: white;
+          z-index: 100;
+          cursor: pointer;
+          transition: .5s;
+          &:hover{
+            background: white;
+            color: black;
+          }
+        }
+        p{
+          color: white;
+        }
+        .address_form{
+          position: relative;
+          input{
+            width: 250px;
+            height: 35px;
+            outline: none;
+            padding-left: 10px;
+            border: 0;
+            border-bottom: 2px solid black;
+            border-left: 2px solid black;
+          }
+          li{
+            position: absolute;
+            color: black;
+            right: 5px;
+            top: 5px;
+            font-size: 20px;
+          }
+        }
+        .form_time{
+          width: 300px;
+          display: flex;
+          justify-content: space-around;
+          .time_form{
+            position: relative;
+            input{
+              width: 100px;
+              height: 35px;
+              outline: none;
+              padding-left: 10px;
+              border: 0;
+              border-bottom: 2px solid black;
+              border-left: 2px solid black;
+            }
+            li{
+              position: absolute;
+              color: black;
+              right: 5px;
+              top: 7px;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+  
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.title {
+  @media (min-width:320px) {
+    border-bottom: 1px solid #ccc;
+    padding: 0 1rem;
+    margin: 20px 0;
+    margin-top: 40px;
+
+  }
+
+  @media (min-width:1024px) {
+    width: 100%;
+    display: flex;
+    padding: 0 4rem;
+    margin-top: 0;
+  }
+
+  h2 {
+    @media (min-width:320px) {
+      font-weight: 600;
+      color: #333;
+    }
+
+    @media (min-width:1024px) {
+      font-size: 30px;
+    }
+  }
+}
+
+.FAQ {
+  .toCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .heading {
+      width: 90%;
+      margin-bottom: 50px;
+      text-align: center;
+
+      @media (min-width: 320px) {
+        font-size: 20px;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 25px;
+        color: #333;
+      }
+    }
+
+    .faq_card {
+      @media (min-width: 320px) {
+        width: 90%;
+      }
+
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 2px solid #ccc;
+      border-radius: 15px;
+      margin-bottom: 35px;
+      cursor: pointer;
+      transition: 0.5s;
+      .startView {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        background: white;
+
+        h1 {
+          @media (min-width: 320px) {
+            font-size: 15px;
+            color: #333;
+          }
+
+          @media (min-width: 1024px) {
+            font-size: 20px;
+          }
+
+          margin: 0;
+          transition: .5s;
+        }
+
+        .newColor {
+          color: #3B4FF9;
+          transition: .5s;
+        }
+
+        div {
+          li {
+            list-style: none;
+            font-size: 25px;
+            color: #3B4FF9;
+            cursor: pointer;
+            transition: .5s;
+          }
+
+          .rotated {
+            transform: rotateX(180deg);
+            transition: .5s;
+          }
+        }
+      }
+
+      .accordeon {
+        height: 0;
+        transform: translateY(-100%);
+        display: none;
+        z-index: -1;
+      }
+
+      .accordeonActive {
+        height: 100%;
+        display: block;
+        transform: translateY(0);
+        font-weight: 600;
+        transition: .5s;
+        color: #777;
+      }
+    }
+  }
+
+}

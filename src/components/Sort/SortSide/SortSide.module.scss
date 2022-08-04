@@ -1,0 +1,25 @@
+.sortSideActivated{
+  width: 200px;
+  display: block;
+  padding: 10px;
+  background: #5C5CD6;
+  border-radius: 10px;
+  position: absolute;
+  top: 82px;
+  z-index: 100;
+  p{
+    margin: 10px 0;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    &:hover{
+      background: #8e8eff;
+      border-radius: 5px;
+      border-bottom: 0.1px solid aliceblue;
+    }
+  }
+}
+
+.sortSideDisactivated{
+  display: none;
+}

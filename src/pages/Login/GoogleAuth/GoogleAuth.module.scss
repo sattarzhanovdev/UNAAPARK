@@ -1,0 +1,24 @@
+button {
+    width: 250px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    background: none;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: .5s;
+    &:hover {
+        color: white;
+        background: black;
+    }
+
+    img {
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+    }
+}

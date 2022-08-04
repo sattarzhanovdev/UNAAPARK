@@ -1,0 +1,27 @@
+.conditions{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .heading{
+    background: #4CEC96;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 500;
+    margin: 25px 0;
+  }
+  .cond{
+    width: 100%;
+    background: #3B4FF9;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 25px;
+    margin-top: 20px;
+    .condition{
+      text-align: center;
+      color: white;
+    }
+  }
+}

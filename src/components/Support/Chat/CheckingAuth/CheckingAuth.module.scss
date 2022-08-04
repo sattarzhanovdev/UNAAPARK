@@ -1,0 +1,81 @@
+.checking{
+  @media (min-width: 320px) {
+    width: 100%;
+    height: 90vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+
+  @media (min-width: 1024px) {
+    width: 350px;
+    height: 350px;
+    position: fixed;
+    right: 100px;
+    bottom: 25px;
+  }
+  padding: 15px;
+  background: #5C5CD6;
+  border: 5px solid white;
+  border-radius: 15px;
+  position: fixed;
+  bottom: 25px;
+  right: 100px;
+  .checking_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    position: relative;
+    &::before{
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: white;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+    
+    .left{
+      display: flex;
+      align-items: center;
+      img{
+        width: 25px;
+        height: 25px;
+      }
+      p{
+        margin: 0;
+        margin-left: 15px;
+        color: white;
+      }
+    }
+    
+    .right{
+      color: white;
+      li{
+        list-style: none;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .content{
+    width: 100%;
+    height: 80%;
+    background: white;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li{
+      list-style: none;
+      margin: 0 10px;
+      a{
+        color: black;
+      }
+    }
+  }
+}

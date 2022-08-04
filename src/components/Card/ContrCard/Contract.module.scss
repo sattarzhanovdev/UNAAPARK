@@ -1,0 +1,75 @@
+.title {
+  @media (min-width:320px) {
+      border-bottom: 1px solid #ccc;
+      padding: 0 1rem;
+      margin: 20px 0;
+      margin-top: 40px;
+     
+  }
+  @media (min-width:1024px) {
+      width: 100%;
+      display: flex;
+      padding: 0 4rem;
+      margin-top: 0;
+  }
+  h2{
+      @media (min-width:320px) {
+          font-weight: 600;
+          color: #333;
+      }
+      @media (min-width:1024px){
+          font-size: 30px;
+      }
+  }
+}
+
+
+.toCenter{
+  display: flex;
+  justify-content: center;
+
+  .contracts{
+    @media (min-width:320px) {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem 1rem;
+      gap: 24px;
+    }
+
+
+    .contract{
+      @media (min-width:320px){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 250px;
+        background: #3B4FF9;
+        border-radius: 10px;
+      }
+      @media (min-width:1024px) {
+        width: 600px;
+      }
+    
+      h3{
+        @media (min-width:320px) {
+          text-align: center;
+        }
+        margin-bottom: 50px;
+        color: white;
+      }
+      button{
+        width: 150px;
+        height: 35px;
+        background: white;
+        border: 0;
+        border-radius: 5px;
+        color: #3B4FF9;
+        cursor: pointer;
+      }
+    }
+  }
+}

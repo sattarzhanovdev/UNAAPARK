@@ -1,0 +1,116 @@
+.review{
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h1{
+    text-align: center;
+  }
+  .review_form_with_auth{
+    width: 350px;
+    height: 150px;
+    background: #3B4FF9;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .auth{
+      display: flex;
+      list-style: none;
+      span{
+        color: white;
+      }
+      li{
+        margin: 0 10px;
+        a{
+          color: white;
+        }
+      }
+    }
+  }
+  .addReview{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input{
+      @media (min-width: 320px) {
+        width: 250px;
+      }
+      @media (min-width: 1024px) {
+        width: 500px;
+      }
+
+      height: 50px;
+      padding-left: 15px;
+      outline: none;
+    }
+    button{
+      background: #3B4FF9;
+      color: white;
+      transition: .3s;
+      border: 1px solid #3B4FF9;
+      &:hover{
+        background: none;
+        color: #3B4FF9;
+      }
+    }
+  }
+  .reviews{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    gap: 20px;
+    .reviewCard{
+      width: 350px;
+      padding: 20px 25px;
+      background: aliceblue;
+      border: 1px solid #d6e8f9;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      .reviewersInfo{
+        display: flex;
+        .avatar{
+          margin-right: 10px;
+          img{
+            width: 35px;
+            height: 35px;
+            border-radius: 50px;
+          }
+        }
+        .info{
+          display: flex;
+          flex-direction: column;
+          i{
+            color: #555;
+            margin: 0;
+          }
+          .timeInfo{
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            color: #555;
+            margin-top: 10px;
+            .date{
+              display: flex;
+              align-items: center;
+              p{
+                margin: 0 5px;
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+      .reviewText{
+        p{
+          color: #555;
+        }
+      }
+    }
+  }
+}

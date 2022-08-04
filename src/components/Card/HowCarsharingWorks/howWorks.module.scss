@@ -1,0 +1,95 @@
+.howCarsharingWorks{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  .heading{
+    background: #4CEC96;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 500;
+  } 
+  .toCenter{
+    width: 100%;
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    .steps{
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; 
+      .circle{
+        width: 35px;
+        height: 35px;
+        @media (min-width: 1440px) {
+          width: 50px;
+          height: 50px;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        border: 2px solid #ccc;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: .5s;
+      }
+      .circleActive{
+        width: 35px;
+        height: 35px;
+        @media (min-width: 1440px) {
+          width: 50px;
+          height: 50px;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #3B4FF9;
+        box-shadow: 0 0 10px #3B4FF9;
+        color: white;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: .5s;
+      }
+      .res{
+        display: flex;
+        align-items: center;
+  
+        span{
+          @media (min-width: 768px) {
+            width: 50px;
+            height: 2px;
+            background: #ccc;
+            margin-left: 25px;
+          }
+          @media (min-width: 1024px) {
+            margin-left: 50px;
+          }
+          @media (min-width: 1440px) {
+            margin-left: 100px;
+          }
+        }
+  
+        .none{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .desc{
+    margin-top: 50px;
+    h1{
+      margin: 0;
+    }
+    div{
+      
+      text-align: center;
+      p{
+        text-align: center;
+      }
+    }
+  }
+}

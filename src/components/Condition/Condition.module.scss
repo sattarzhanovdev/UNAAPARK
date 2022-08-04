@@ -1,0 +1,181 @@
+.container {
+    @media (min-width:1024px) {
+        width: 100%;
+        margin-top: 40px;
+        padding: 0;
+        padding-top: 2rem;
+    }
+
+    .title {
+        margin-top: 50px;
+        @media (min-width:320px) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 1rem;
+        }
+        @media (min-width:1024px) {
+            margin-top: 60px;
+        } 
+        .title_desc {
+            @media (min-width:1024px) {
+                text-align: center;
+                width: 50%;
+            }
+        }
+
+        h1 {
+            @media (min-width:320px) {
+                font-size: 23px;
+                text-align: center;
+                margin: 0;
+                color: #333;
+            }
+
+            @media (min-width:1024px) {
+                text-align: none;
+                font-size: 30px;
+            }
+        }
+
+        p {
+
+            @media (min-width:320px) {
+                text-align: center;
+                color: #777;
+                margin: 0;
+            }
+
+            @media (min-width:1024px) {
+                text-align: none;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .content {
+        @media (min-width:320px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 20px;
+            padding: 2rem 0;
+        }
+
+        @media (min-width:768px) {
+            flex-direction: row;
+        }
+
+        .card {
+            @media (min-width:320px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+                margin: 20px 0;
+            }
+
+            .image {
+                @media (min-width:320px) {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 150px;
+                    height: 150px;
+                    padding: 2rem;
+                    background-color: #3B4FF9;
+                    border-radius: 50%;
+                    box-shadow: 0 0 5px #3B4FF9;
+                    border-radius: 50%;
+                }
+
+                @media (min-width:768px) {
+                    width: 100px;
+                    height: 100px;
+                    padding: 1rem;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            p {
+                color: #777;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .condition {
+        @media (min-width:320px) {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column-reverse;
+            padding: 1rem;
+            margin-top: 60px;
+            background-color: #3B4FF9;
+            gap: 20px;
+        }
+
+        .card2 {
+            @media (min-width:320px) {
+                // display: flex;
+                align-items: center;
+                flex-direction: column;
+
+            }
+
+            @media (min-width:1024px) {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+
+            .text {
+                @media (min-width:320px) {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    font-weight: 600;
+                }
+
+                @media (min-width:1024px) {
+                    width: 50%;
+                }
+
+                p {
+                    @media (min-width:768px) {
+                        line-height: 2.2rem;
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .img {
+                img {
+                    width: 100%;
+                    height: 400px;
+                    object-fit: contain;
+                }
+            }
+        }
+        &:nth-last-child(1) {
+            .card2{
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+}

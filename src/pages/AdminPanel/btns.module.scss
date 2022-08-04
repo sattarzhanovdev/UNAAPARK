@@ -1,0 +1,25 @@
+div{
+  .btn{
+    background-color: none;
+    border: 1px solid #3B4FF9;
+    margin-left: 50px;
+    transition: .5s;
+    @media (min-width: 320px) {
+      width: 220px;
+    }
+    @media (min-width: 425px) {
+      width: 320px;
+    }
+    &:hover{
+      background: #3B4FF9;
+    }
+    &:hover a{
+      color: white;
+    }
+    a{
+      text-decoration: none;
+      color: #3B4FF9;
+      transition: .5s;
+    }
+  }
+}

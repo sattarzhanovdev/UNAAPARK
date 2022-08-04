@@ -1,0 +1,15 @@
+.root{
+    // width: 180px;
+    @media (min-width:320px) {
+        width: 150px;
+    }
+    @media (min-width:425px){
+        width: 140px;
+    }
+    @media (min-width:1024px){
+        width: 180px;
+    }
+    &>*{
+        font-weight: bold !important;
+    }
+}
