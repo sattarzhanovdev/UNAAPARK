@@ -40,8 +40,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 50%;
         border: 1px solid #ccc;
+        border-radius: 50%;
+        cursor: pointer;
 
         p {
           font-size: 30px;
@@ -49,11 +50,59 @@
           color: white;
         }
 
-        img {
-          width: 80px;
-          height: 80px;
-          top: -6%;
-          border-radius: 50%;
+        input{
+          display: none;
+        }
+
+        label{
+          padding: 0;
+          margin: 0;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          &::before{
+            content: 'change';
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background: rgba($color: black, $alpha: 0.5);
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            opacity: 0;
+            transition: .3s;
+          }
+          &:hover:before{
+            content: 'change';
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background: rgba($color: black, $alpha: 0.5);
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            opacity: 1;
+          }
         }
       }
 

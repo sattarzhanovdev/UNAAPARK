@@ -2,23 +2,26 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FaEnvelope, FaUser } from 'react-icons/fa'
 import { BsFillBookmarkFill } from 'react-icons/bs'
-import { MdOutlineKeyboardArrowRight, MdArrowBackIosNew } from 'react-icons/md'
+import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 import { RiLogoutBoxFill } from 'react-icons/ri'
 import { IoReturnUpBack } from 'react-icons/io5'
 import { Link } from 'react-router-dom'
-
+import {getDownloadURL, ref, uploadBytesResumable} from "firebase/storage";
 import { useAuth } from '../../../providers/useAuth'
 import cls from './Profile.module.scss'
-import { handleSignOut } from '../../../firebase/firebase'
-
-
-
-
+import { changeAva, handleSignOut } from '../../../firebase/firebase'
+import { storage } from '../../../App.js'
+import { API } from '../../../configs/api'
 
 
 const ProfileCard = () => {
+  const [ active, setActive ] = React.useState(false)
+  const [ title, setTitle ] = React.useState('')
+  const [ url, setUrl ] = React.useState('' || null)
+  const [ file, setFile ] = React.useState(null)
 
   const { users } = useAuth()
+
 
   const [HEX, setHEX] = useState('')
   const navigate = useNavigate()
@@ -37,6 +40,40 @@ const ProfileCard = () => {
     users && window.location.reload()  
   }
 
+  const uploading = () => {	
+    console.log(file.type);
+    const storageRef = ref(storage, `avatars/${file.name}`);
+    const uploadTask = uploadBytesResumable(storageRef, file);
+    uploadTask.on("state_changed",
+    (snapshot) => {
+      const progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
+    },
+    (error) => {
+      alert(error);
+    },
+    () => {
+      getDownloadURL(uploadTask.snapshot.ref)
+        .then((downloadURL) => {
+          changeAva(users.email, downloadURL)
+        });
+      })
+      
+      setActive(true)
+      setTimeout(() => {
+        setActive(false)
+        navigate('/')
+      }, [50000])
+      
+    }
+  const openFile = (e) => {
+    let reader = new FileReader();
+    reader.onload = () => {
+      let dataURL = reader.result;
+      setUrl(dataURL)
+    };
+    reader.readAsDataURL(e);
+  };
+
   return (
     <div>
       <div className={cls.container}>
@@ -49,10 +86,25 @@ const ProfileCard = () => {
                 : { backgroundColor: 'none' }
               }
             >
+              <input 
+                type="file" 
+                id='photo_upload' 
+                onChange={e => {
+                  openFile(e.target.files[0])
+                  uploading(e.target.files[0])
+                }}
+              />
               {
                 users && users.photo
-                  ? <img src={users.photo} alt="avatar" />
-                  : <p>{users && !users.photo && users.name[0]} </p>
+                  ? 
+                  <label htmlFor="photo_upload">
+                    <img 
+                      src={url ? url : users.photo} 
+                      alt="avatar" 
+                    />
+                  </label>
+                  : 
+                  <p>{users && !users.photo && users.name[0]} </p>
               }
             </div>
             <ul className={cls.list}>

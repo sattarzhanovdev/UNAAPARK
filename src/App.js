@@ -21,6 +21,12 @@ import Favorites from './pages/Favorites'
 import AdminPanel from './pages/AdminPanel'
 import ChatAdmin from './components/ChatAdmin'
 import PrivateAdmin from './components/PrivateAdmin/PrivateAdmin'
+import { getStorage } from 'firebase/storage'
+import { firebaseConfig } from './firebase/firebase'
+import * as firebase from 'firebase/app'
+
+const app = firebase.initializeApp(firebaseConfig)
+export const storage = getStorage(app);
 
 function App() {
 

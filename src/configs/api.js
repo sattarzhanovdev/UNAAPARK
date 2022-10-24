@@ -14,6 +14,9 @@ export const API = {
   getReview: (id) => {
     return axios.get(`${URL_BASE}/cars/${id}/review.json`)
   },
+  changeAva: (data) => {
+    return axios.post(`${URL_BASE}/avatars.json`)
+  }
 }
 
 export const Message = {

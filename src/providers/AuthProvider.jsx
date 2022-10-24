@@ -18,6 +18,7 @@ export const AuthProvider = ({ children }) => {
                     name: user.displayName,
                     email: user.email,
                     photo: user.photoURL,
+                    password: user.password
                 })
                 setLoading(false)
             } else {

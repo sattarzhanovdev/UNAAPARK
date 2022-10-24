@@ -1,10 +1,12 @@
 import * as firebase from 'firebase/app'
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth'
 import { getDatabase } from 'firebase/database'
+import GoogleAuth from '../pages/Login/GoogleAuth/GoogleAuth';
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyDntJdWjCFGF9smJTjJQZiVDxogOGZeQVA",
   authDomain: "cars-c0e3b.firebaseapp.com",
+  databaseURL: "https://cars-c0e3b-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "cars-c0e3b",
   storageBucket: "cars-c0e3b.appspot.com",
   messagingSenderId: "385208749471",
@@ -52,6 +54,17 @@ export const handleRegistWithEmail = async (useremail, userpassword, name) => {
 }
 
 ///////////////////////////////////////////////////
+
+
+export const changeAva = async (useremail, avatar) => {
+  try {
+    const res = await signInWithPopup(auth, provider)
+    updateProfile(res.user, {
+      photoURL: avatar
+    })
+  } catch {
+  }
+}
 
 
 
